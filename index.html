@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alireza Sadat | Public Health & Clinical Trials</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --lapis: #1f3c88;
+        --night: #0b1530;
+        --mist: #eef2f9;
+        --gold: #c8952b;
+        --pulse: #35c2b0;
+        --ink: #16203a;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 70px;
+      }
+      body {
+        font-family: Figtree, system-ui, sans-serif;
+        color: var(--ink);
+        background: #fff;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .brand {
+        font-family: "Bricolage Grotesque", Figtree, sans-serif;
+        letter-spacing: -0.02em;  
+      }
+      .navbar {
+        background: rgba(11, 21, 48, 0.92);
+        backdrop-filter: blur(8px);
+      }
+      .navbar .nav-link {
+        color: #c9d3ee;
+        font-weight: 500;
+      }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: #fff;
+      }
+      .brand {
+        color: #fff;
+        font-weight: 800;
+      }
+      .hero {
+        min-height: 100vh;
+        background: radial-gradient(
+          circle at 80% 20%,
+          #1f3c88 0,
+          var(--night) 60%
+        );
+        color: #fff;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-top: 70px;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 7vw, 5.2rem);
+        font-weight: 800;
+        line-height: 1;
+      }
+      .role {
+        font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+        color: var(--pulse);
+        min-height: 2.2rem;
+        font-weight: 500;
+      }
+      .caret {
+        display: inline-block;
+        width: 2px;
+        height: 1.1em;
+        background: var(--pulse);
+        margin-left: 3px;
+        vertical-align: -0.15em;
+        animation: blink 1s steps(1) infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .ecg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 8%;
+        width: 100%;
+        height: 170px;
+        opacity: 0.9;
+        pointer-events: none;
+      }
+      .ecg path {
+        fill: none;
+        stroke: var(--pulse);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 2400;
+        stroke-dashoffset: 2400;
+        animation:
+          draw 5s ease-out 0.4s forwards,
+          loop 6s linear 5.4s infinite;
+      }
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes loop {
+        0% {
+          stroke-dashoffset: 0;
+        }
+        45% {
+          stroke-dashoffset: -2400;
+        }
+        45.01% {
+          stroke-dashoffset: 2400;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      .btn-gold {
+        background: var(--gold);
+        color: #1a1200;
+        font-weight: 600;
+        border: 0;
+      }
+      .btn-gold:hover {
+        background: #e0a92f;
+        color: #1a1200;
+      }
+      .btn-ghost {
+        border: 1px solid #5b6ea8;
+        color: #fff;
+      }
+      .btn-ghost:hover {
+        background: #ffffff18;
+        color: #fff;
+      }
+      .mono {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--lapis), #0e1e4a);
+        border: 3px solid var(--gold);
+        display: grid;
+        place-items: center;
+        font: 800 3.2rem "Bricolage Grotesque";
+        color: #fff;
+        overflow: hidden;
+      }
+      .mono img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      section {
+        padding: 88px 0;
+      }
+      .alt {
+        background: var(--mist);
+      }
+      h2 {
+        font-weight: 800;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+      }
+      .lead-sm {
+        max-width: 64ch;
+      }
+      .tl {
+        border-left: 3px solid var(--lapis);
+        padding-left: 26px;
+        margin-left: 8px;
+      }
+      .tl-item {
+        position: relative;
+        margin-bottom: 34px;
+      }
+      .tl-item::before {
+        content: "";
+        position: absolute;
+        left: -36px;
+        top: 6px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: var(--gold);
+        border: 3px solid #fff;
+        box-shadow: 0 0 0 2px var(--lapis);
+      }
+      .tl-item small {
+        color: #5a6684;
+        font-weight: 600;
+      }
+      .card-skill {
+        border: 0;
+        border-left: 5px solid var(--lapis);
+        border-radius: 6px;
+        background: #fff;
+        box-shadow: 0 1px 0 #d8e0f0;
+      }
+      .chip {
+        display: inline-block;
+        background: #fff;
+        border: 1px solid #c5d0ea;
+        border-radius: 999px;
+        padding: 5px 14px;
+        margin: 4px 6px 4px 0;
+        font-weight: 500;
+        font-size: 0.92rem;
+        transition: 0.25s;
+      }
+      .chip:hover {
+        background: var(--lapis);
+        color: #fff;
+        border-color: var(--lapis);
+        transform: translateY(-2px);
+      }
+      .fact {
+        border-top: 3px solid var(--gold);
+        padding-top: 10px;
+      }
+      .fact b {
+        font-family: "Bricolage Grotesque";
+        font-size: 2.4rem;
+        color: var(--lapis);
+      }
+      .award {
+        border-left: 4px solid var(--gold);
+        padding: 6px 0 6px 16px;
+        margin-bottom: 14px;
+        font-weight: 500;
+      }
+      /* certificates carousel */
+      .cert-frame {
+        background: var(--night);
+        border-radius: 10px;
+        overflow: hidden;
+        color: #fff;
+      }
+      .cert-img {
+        aspect-ratio: 4/3;
+        background: #132250;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+      .cert-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .cert-ph {
+        padding: 20px;
+        text-align: center;
+        color: #9fb0e0;
+      }
+      .cert-body {
+        padding: 32px;
+      }
+      .carousel-indicators [data-bs-target] {
+        background-color: var(--gold);
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 8%;
+      }
+      .ref {
+        background: #fff;
+        border-left: 5px solid var(--lapis);
+        border-radius: 6px;
+        padding: 16px 20px;
+        height: 100%;
+      }
+      footer {
+        background: var(--night);
+        color: #c9d3ee;
+        padding: 40px 0;
+      }
+      footer a,
+      .ref a {
+        color: inherit;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+        transition:
+          opacity 0.7s,
+          transform 0.7s;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .ecg path {
+          animation: none;
+          stroke-dashoffset: 0;
+        }
+        .caret {
+          animation: none;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#nav" data-bs-offset="80">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-xl fixed-top" id="nav">
+      <div class="container">
+        <a class="navbar-brand brand" href="#home">Alireza Sadat</a>
+        <button
+          class="navbar-toggler border-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-label="Menu">
+          <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#research">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certificates">Certificates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#awards">Awards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#references">References</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div class="container position-relative" style="z-index: 2">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-8">
+            <p class="mb-2" style="color: #9fb0e0">Badakhshan, Afghanistan</p>
+            <h1>Alireza Sadat</h1>
+            <p class="role mt-3">
+              <span id="typed"></span><span class="caret"></span>
+            </p>
+            <p class="lead-sm mt-3" style="color: #c9d3ee">
+              Public Health Specialist | Clinical Trials | MHPSS | Research
+              &amp; M&amp;E
+            </p>
+            <div class="mt-4 d-flex flex-wrap gap-2">
+              <a href="#experience" class="btn btn-gold btn-lg">See my work</a>
+              <a href="#certificates" class="btn btn-ghost btn-lg"
+                >My certificates</a
+              >
+              <a href="#contact" class="btn btn-ghost btn-lg">Get in touch</a>
+            </div>
+          </div>
+          <!-- To use a photo: replace AS with <img src="images/profile.jpg" alt="Alireza Sadat"> -->
+          <div class="col-lg-4 d-none d-lg-flex justify-content-center">
+            <div class="mono" aria-hidden="true">AS</div>
+          </div>
+        </div>
+      </div>
+      <svg
+        class="ecg"
+        viewBox="0 0 1200 170"
+        preserveAspectRatio="none"
+        aria-hidden="true">
+        <path
+          d="M0 95 H180 L200 95 L215 70 L230 95 H300 L318 105 L340 20 L365 150 L385 95 H470 L490 78 L512 95 H700 L720 95 L735 70 L750 95 H820 L838 105 L860 20 L885 150 L905 95 H990 L1010 78 L1032 95 H1200" />
+      </svg>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7">
+            <h2>Professional summary</h2>
+            <p class="lead-sm mt-3">
+              Dedicated public health professional and MPH candidate with 4+
+              years of experience in health management, public health, mental
+              health and psychosocial support (MHPSS), research, and monitoring
+              &amp; evaluation (M&amp;E).
+            </p>
+            <p class="lead-sm">
+              Experienced across the full project cycle for health
+              interventions, from programming and formulation to implementation
+              and monitoring. Skilled in data and IT tools, with a strong
+              understanding of the cultural and social context of regions across
+              Afghanistan, and a commitment to delivering impactful, culturally
+              sensitive public health work.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="fact">
+                  <b data-count="4" data-plus="1">0</b>
+                  <div>years in public health</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <b data-count="3" data-plus="0">0</b>
+                  <div>languages</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <b data-count="7" data-plus="0">0</b>
+                  <div>certificates and trainings</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="fact">
+                  <b data-count="3" data-plus="0">0</b>
+                  <div>research projects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="alt">
+      <div class="container">
+        <h2 class="mb-5">Work experience</h2>
+        <div class="tl">
+          <div class="tl-item reveal">
+            <small>January 2025 to present</small>
+            <h4 class="mb-1">
+              Expert, Regulatory and Control of Clinical Trials
+            </h4>
+            <div class="mb-2">
+              Afghanistan Food and Drug Authority (AFDA), Kabul, Afghanistan
+            </div>
+            <ul class="lead-sm mb-0">
+              <li>
+                Organize and oversee the regulatory control of clinical trials
+                within the Clinical Trial Department.
+              </li>
+              <li>
+                Support review, monitoring, and documentation processes to
+                ensure trials meet ethical and regulatory standards.
+              </li>
+              <li>
+                Member of the Committee for the Revision of Afghanistan's
+                National List of Licensed Medicines.
+              </li>
+              <li>
+                Presenter at meetings of the National Medicines and Food Board
+                of Afghanistan, chaired by the Administrative Deputy Office of
+                the Prime Minister of the Islamic Emirate of Afghanistan.
+              </li>
+            </ul>
+          </div>
+          <div class="tl-item reveal">
+            <small>1 to 3 September 2026</small>
+            <h4 class="mb-1">Trainer</h4>
+            <div class="mb-2">
+              Training on the utilization, importance and objectives of the
+              licensed medicines list
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <small>August 2023 to July 2024</small>
+            <h4 class="mb-1">Instructor of Medical Science</h4>
+            <div class="mb-2">
+              Taj Institute of Health Science, Kabul, Afghanistan
+            </div>
+            <ul class="lead-sm mb-0">
+              <li>
+                Taught Histology, Physiology, Biochemistry, Mental Health,
+                Health Management, Nutrition, Medical Research, and Basics of
+                Public Health.
+              </li>
+              <li>
+                Prepared course materials and assessed student performance in
+                health science programs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <h2 class="mb-4">Education</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Master of Public Health (MPH)</h5>
+              <div>Afghan Islamic International University</div>
+              <small class="text-secondary">Candidate, in progress</small>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Healthcare Management</h5>
+              <div>The Institute of International Education (IIE)</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Bachelor in Public Health</h5>
+              <div>Kabul Medical University, Kabul</div>
+              <small class="text-secondary"
+                >Graduated as Best Student, 90% overall average</small
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Diploma in English Language (DELL) and Special Speaking</h5>
+              <div>Muslim English Language Institute, Kabul</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Baccalaureate Degree</h5>
+              <div>Gharan High School, Badakhshan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="alt">
+      <div class="container">
+        <h2 class="mb-4">Research projects</h2>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Breast self-examination</h5>
+              <p class="mb-0">
+                Knowledge, attitude and practice among female students of
+                medical institutes in Kabul city.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Cardiovascular diseases</h5>
+              <p class="mb-0">
+                Knowledge, attitude and practice of heart patients at
+                Cardiovascular Super-specialty Hospital, Kabul.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Mental illness and addiction</h5>
+              <p class="mb-0">
+                Mental illness associated with addiction at Super-specialty
+                Mental Health Hospital, Kabul.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES CAROUSEL -->
+    <section id="certificates">
+      <div class="container">
+        <h2 class="mb-4">Certifications and training</h2>
+        <div
+          id="certCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="6000">
+          <!-- 1. dots -->
+          <div class="carousel-indicators" style="bottom: -40px">
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-label="Slide 1"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"></button>
+            <button
+              type="button"
+              data-bs-target="#certCarousel"
+              data-bs-slide-to="6"
+              aria-label="Slide 7"></button>
+          </div>
+
+          <!-- 2. slides: copy one "carousel-item" block for every new certificate -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/teacher1.png"
+                      alt="M&E training certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/me-training.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>Monitoring &amp; Evaluation (M&amp;E) Training</h4>
+                    <p class="mb-0">Economic Board of the Aga Khan Council</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="images/certificates/public-health-ethics.jpg"
+                      alt="Public Health Ethics certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/public-health-ethics.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>Public Health Ethics</h4>
+                    <p class="mb-0">
+                      Eastern Mediterranean Public Health Network (EMPHNET)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/SN33tOSRylImcqMbCTaZmr7OCe0 (1).png"
+                      alt="Advanced SPSS certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/advanced-spss.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>Advanced SPSS</h4>
+                    <p class="mb-0">
+                      National Statistics and Information Authority (NSIA),
+                      Kabul University
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/UI3.png"
+                      alt="SPSS certificate 2022"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/spss-2022.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>
+                      Statistical Package for the Social Sciences (SPSS), 2022
+                    </h4>
+                    <p class="mb-0">Khatam-al-Nabeen University</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/OFMM6lNQUhfdHJ5sSGQrYI5SZUY (1).png"
+                      alt="First Aid certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/first-aid.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>First Aid Course</h4>
+                    <p class="mb-0">Haziq Medical Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/teacher7.png"
+                      alt="Public Speaking certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/public-speaking.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>Public Speaking (3 months)</h4>
+                    <p class="mb-0">Aowj Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="cert-frame mx-auto" style="max-width: 900px">
+                <div class="row g-0 align-items-center">
+                  <div class="col-md-6 cert-img">
+                    <img
+                      src="/bootcamp Netlinks/CM5oGp8LwxUN9ZCtLoN3bkX1nc8.jpg"
+                      alt="Research proposal certificate"
+                      onerror="
+                        this.replaceWith(
+                          Object.assign(document.createElement('div'), {
+                            className: 'cert-ph',
+                            textContent:
+                              'Add images/certificates/research-proposal.jpg',
+                          }),
+                        )
+                      " />
+                  </div>
+                  <div class="col-md-6 cert-body">
+                    <h4>How to Write a Research Proposal</h4>
+                    <p class="mb-0">Women Ascension Skills &amp; Development</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. arrows -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#certCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span
+            ><span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#certCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span
+            ><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div style="height: 50px"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="alt">
+      <div class="container">
+        <h2 class="mb-4">Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Data and research</h5>
+              <div>
+                <span class="chip">SPSS</span><span class="chip">STATA</span
+                ><span class="chip">Epi Info</span
+                ><span class="chip">DHIS2</span
+                ><span class="chip">Kobo Toolbox</span
+                ><span class="chip">ODK</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Office and productivity</h5>
+              <div>
+                <span class="chip">MS Word</span
+                ><span class="chip">MS Excel</span
+                ><span class="chip">MS PowerPoint</span
+                ><span class="chip">MS Access</span
+                ><span class="chip">Google Docs</span
+                ><span class="chip">Google Slides</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Design and media</h5>
+              <div>
+                <span class="chip">Adobe Photoshop</span
+                ><span class="chip">Adobe Illustrator</span
+                ><span class="chip">Adobe Premiere</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="card card-skill p-4 h-100">
+              <h5>Languages</h5>
+              <div>
+                <span class="chip">Dari</span><span class="chip">Pashto</span
+                ><span class="chip">English</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 reveal">
+            <div class="card card-skill p-4">
+              <h5>Core competencies</h5>
+              <div>
+                <span class="chip">Leadership</span
+                ><span class="chip">Planning &amp; organizing</span
+                ><span class="chip">Attention to detail</span
+                ><span class="chip">Analytical &amp; problem-solving</span
+                ><span class="chip">Communication</span
+                ><span class="chip">Flexibility</span
+                ><span class="chip">Sound judgment</span
+                ><span class="chip">Team collaboration</span
+                ><span class="chip">Independent work</span
+                ><span class="chip">Continuous learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section id="awards">
+      <div class="container">
+        <h2 class="mb-4">Awards</h2>
+        <div class="award reveal">
+          Best Student of Bachelor Degree, 90% total average
+        </div>
+        <div class="award reveal">
+          Best Student of the Year among all students of Badakhshan Province,
+          2017
+        </div>
+        <div class="award reveal">Best Student of High School</div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section id="references" class="alt">
+      <div class="container">
+        <h2 class="mb-4">References</h2>
+        <div class="row g-4">
+          <div class="col-md-6 reveal">
+            <div class="ref">
+              <h5 class="mb-1">Dr. Amro Zmarak Yasir</h5>
+              Head of Clinical Trials Regulatory and Control Department, AFDA<br /><a
+                href="mailto:clinicaltrial@afda.gov.af"
+                >clinicaltrial@afda.gov.af</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="ref">
+              <h5 class="mb-1">Professor Dr. Rohullah Sakhi</h5>
+              Dean of Public Health Faculty<br /><a
+                href="mailto:Rohullahsakhi@kums.edu.af"
+                >Rohullahsakhi@kums.edu.af</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="ref">
+              <h5 class="mb-1">Noorullah Ahmadi</h5>
+              <a href="mailto:noorullah.ahmadi@occd.org.af"
+                >noorullah.ahmadi@occd.org.af</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="ref">
+              <h5 class="mb-1">Taj Institute of Health Science</h5>
+              HR Office<br /><a href="mailto:tajmedicalinstitute@gmail.com"
+                >tajmedicalinstitute@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <h2>Contact</h2>
+            <p class="lead-sm">
+              Write to me about research, trainings, or public health projects.
+            </p>
+            <p class="mb-1">
+              <b>Email:</b>
+              <a href="mailto:alireza.sadat435@gmail.com"
+                >alireza.sadat435@gmail.com</a
+              >
+            </p>
+            <p class="mb-1">
+              <b>Phone:</b> <a href="tel:+93790017551">+93 (0) 790 017 551</a>
+            </p>
+            <p class="mb-1">
+              <b>Phone:</b> <a href="tel:+93798526353">+93 (0) 798 526 353</a>
+            </p>
+            <p><b>Location:</b> Badakhshan, Afghanistan</p>
+          </div>
+          <div class="col-lg-7">
+            <form
+              onsubmit="
+                event.preventDefault();
+                document.getElementById('sent').classList.remove('d-none');
+                this.reset();
+              ">
+              <div class="mb-3">
+                <label class="form-label" for="n">Your name</label
+                ><input id="n" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="e">Email</label
+                ><input id="e" type="email" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="m">Message</label
+                ><textarea
+                  id="m"
+                  rows="4"
+                  class="form-control"
+                  required></textarea>
+              </div>
+              <button class="btn btn-gold btn-lg">Send message</button>
+              <span id="sent" class="ms-3 text-success d-none"
+                >Demo only: connect this form to an email service to send.</span
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container text-center">
+        &copy; 2026 Alireza Sadat. Built with HTML and Bootstrap.
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const roles = [
+        "Public Health Specialist",
+        "Clinical Trials Regulator",
+        "MHPSS and M&E Professional",
+        "Researcher and Trainer",
+      ];
+      const el = document.getElementById("typed");
+      let r = 0,
+        c = 0,
+        del = false;
+      function type() {
+        const w = roles[r];
+        el.textContent = w.slice(0, c);
+        if (!del && c === w.length) {
+          del = true;
+          return setTimeout(type, 1600);
+        }
+        if (del && c === 0) {
+          del = false;
+          r = (r + 1) % roles.length;
+        }
+        c += del ? -1 : 1;
+        setTimeout(type, del ? 35 : 80);
+      }
+      type();
+      const io = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }),
+        { threshold: 0.15 },
+      );
+      document.querySelectorAll(".reveal").forEach((n, i) => {
+        n.style.transitionDelay = (i % 3) * 90 + "ms";
+        io.observe(n);
+      });
+      const co = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const t = +e.target.dataset.count,
+              p = e.target.dataset.plus === "1" ? "+" : "";
+            let n = 0;
+            const s = setInterval(() => {
+              n++;
+              e.target.textContent = n + (n === t ? p : "");
+              if (n >= t) clearInterval(s);
+            }, 250);
+            co.unobserve(e.target);
+          }),
+        { threshold: 0.6 },
+      );
+      document.querySelectorAll("[data-count]").forEach((n) => co.observe(n));
+    </script>
+  </body>
+</html>
